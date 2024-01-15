@@ -1,13 +1,8 @@
 .panel-nav {
   width: var(--nav-width);
-  height: 100vh;
+  height: 100%;
   color: rgba(#fff, 0.8);
   background: var(--dark-color);
-  padding-top: 80px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
 
   &__overlay {
     width: 100%;
@@ -66,7 +61,7 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    padding-bottom: 32px;
+    padding-bottom: 16px;
 
     &__item {
       cursor: pointer;

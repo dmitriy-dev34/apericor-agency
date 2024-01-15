@@ -24,6 +24,10 @@
     }
   }
 
+  .check__input:checked + .check__box {
+    border: 1.4px solid #fff;
+  }
+
   .item-status {
     position: absolute;
     top: 0;

@@ -183,19 +183,27 @@ strong,
 }
 
 .panel-wrapper {
-  height: 100%;
-  // display: grid;
-  // grid-template-columns: 296px auto;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: var(--nav-width) auto;
+  padding-top: var(--header-height);
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .panel-body {
-  width: calc(100% - 64px);
+  // width: calc(100% - 64px);
+  width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding-left: var(--nav-width);
-  padding-top: 80px;
+  padding: 0 64px;
   padding-bottom: clamp(3rem, 2.7rem + 1.5vw, 4.5rem);
-  overflow-x: hidden;
+
+  @media (max-width: 1440px) {
+    padding: 0 32px;
+  }
 
   @media (max-width: 1024px) {
     width: 100%;

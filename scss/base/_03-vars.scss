@@ -77,11 +77,16 @@
   --br-6: 6px;
   --br-4: 4px;
 
+  --header-height: 72px;
   --nav-width: 296px;
 
   --animation-fade: fade 0.3s ease-in-out;
 
   @media (max-width: 1024px) {
     --nav-width: 280px;
+  }
+
+  @media (max-width: 480px) {
+    --header-height: 64px;
   }
 }

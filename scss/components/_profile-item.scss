@@ -8,6 +8,8 @@
   position: relative;
   text-decoration: none;
   z-index: 0;
+  border: 3px solid transparent;
+  transition: border 0.15s ease-in-out;
 
   @media (max-width: 1024px) {
     height: 320px;

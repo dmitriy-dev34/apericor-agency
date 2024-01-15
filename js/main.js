@@ -158,5 +158,43 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  /* ------------------- Select Item -------------------- */
+  const checkboxesItem = document.querySelectorAll(".check__input");
+  const selectAllCheckbox = document.querySelector(".check.select-all input");
+  const checkboxesItemSelect = document.querySelectorAll(
+    ".select-item .check__input"
+  );
+
+  checkboxesItem.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      const photoItem = this.closest(".select-item");
+      if (this.checked) {
+        photoItem.style.border = "3px solid #2BAEEB";
+      } else {
+        photoItem.style.border = "none";
+      }
+    });
+  });
+
+  selectAllCheckbox.addEventListener("change", function () {
+    checkboxesItemSelect.forEach((checkbox) => {
+      checkbox.checked = this.checked;
+      const photoItem = checkbox.closest(".select-item");
+      if (this.checked) {
+        photoItem.style.border = "3px solid #2BAEEB";
+      } else {
+        photoItem.style.border = "none"; // Убираем рамку, если чекбокс не выбран
+      }
+    });
+  });
+
+  checkboxesItemSelect.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      if (!this.checked) {
+        selectAllCheckbox.checked = false;
+      }
+    });
+  });
+
   //! End Scripts
 });
