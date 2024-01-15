@@ -196,5 +196,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  /* ------------------- Fancybox Gallery -------------------- */
+  $(document).ready(function () {
+    $(".fancybox").fancybox();
+  });
+
   //! End Scripts
 });

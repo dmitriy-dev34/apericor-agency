@@ -295,12 +295,21 @@
 									</div>
 								</div>
 								<div class="letter-item__body">
-									<div class="letter-item__content">
-										<p class="letter-item__text">I am your master and you will worship my hard cock like it is your God. You are now my WHORE and I will use your holes deep and hard.</p>
-									</div>
 									<div class="letter-item__photo">
 										<img loading="lazy" src="./img/letters/letter-photo_men.jpg" width="96" height="144" alt="">
 									</div>
+									<p class="letter-item__text">Hello Ekaterina,My name is Pete. I am 49 years of age. I am an American born man of Sicilian Italian decent. My grandparents immigrated here from Italy.
+										I am very honest, sincere and very fun and funny, romantic man who is seriously looking for a woman to be my wife, bride and mother to our future children. I have no children now! I want some however!</p>
+									<p class="letter-item__text">One of the most important things to me is to have a love so strong that nothing can break it! And a loving close family.
+										I have old world values. I love family and want a very close loving family life.
+										I believe that a man and a woman need to be totally honest with each other and trust each other for their love to bloom and grow!
+										I am looking for a woman who wants to commit her life to me (her man) and who will be devoted her entire life as I will be to her as well.
+										I enjoy the outdoors and nature. I love the water and everything with it.</p>
+									<p class="letter-item__text">I also love the mountains and picnics.
+										I am very interested in you, I would love to know more about you and hopefully become very close to you too! I love to cook, and barbecue.
+										You must be able to come live here with me in this country if necessary!
+										We can discuss that! Should you have a computer, you may write me at:
+										*** </p>
 								</div>
 							</div>
 						</div>
@@ -309,6 +318,48 @@
 			</div>
 		</main>
 	</div>
+	<script>
+		/* ------------------- Resize Letter Text -------------------- */
+		document.addEventListener('DOMContentLoaded', function () {
+			const increaseButtons = document.querySelectorAll('.letter-textsize__lg');
+			const decreaseButtons = document.querySelectorAll('.letter-textsize__sm');
+			const letterBlocks = document.querySelectorAll('.letter-item');
+
+			const minFontSize = 14;
+			const maxFontSize = 24;
+
+			// Функция для увеличения размера шрифта
+			increaseButtons.forEach((button, index) => {
+				button.addEventListener('click', function () {
+					let textElements = letterBlocks[index].querySelectorAll('.letter-item__text');
+					fontSize = parseInt(getComputedStyle(textElements[0]).fontSize);
+
+					if (fontSize < maxFontSize) {
+						fontSize += 2;
+						textElements.forEach(text => {
+							text.style.fontSize = fontSize + 'px';
+						});
+					}
+				});
+			});
+
+			// Функция для уменьшения размера шрифта
+			decreaseButtons.forEach((button, index) => {
+				button.addEventListener('click', function () {
+					let textElements = letterBlocks[index].querySelectorAll('.letter-item__text');
+					fontSize = parseInt(getComputedStyle(textElements[0]).fontSize);
+
+					if (fontSize > minFontSize) {
+						fontSize -= 2;
+
+						textElements.forEach(text => {
+							text.style.fontSize = fontSize + 'px';
+						});
+					}
+				});
+			});
+		});
+	</script>
 </body>
 
 </html>
