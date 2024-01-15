@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg">
+	<link rel="icon" type="image/png" href="../favicon/favicon.png">
+	<title>Apericor - агентский кабинет</title>
+	<!-- CSS -->
+	<!-- Materials Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="../css/libs/datepicker.min.css">
+	<link rel="stylesheet" href="../css/main.min.css">
+
+	<!-- Libs JS -->
+	<script src="../js/libs/jquery3.7.1.min.js"></script>
+	<script src="../js/libs/datepicker.min.js"></script>
+	<script src="../js/libs/datepicker.en.min.js"></script>
+	<!-- Scripts JS -->
+	<script defer src="../js/form.js"></script>
+	<script defer src="../js/modal.js"></script>
+	<script defer src="../js/mob-selectfilter.js"></script>
+	<script defer src="../js/main.js"></script>
+</head>
+
+<body class="page__body">
+	<div class="page__wrapper">
+		<button type="button" id="btnScrollTop" textbold="Top"></button>
+
+		<!-- Main -->
+		<main class="page__main">
+
+			<div class="uikit-block">
+				<div class="uikit-block__header">
+					<div class="container">
+						<h1 class="textlarge-3 color-white">Modals</h1>
+					</div>
+				</div>
+
+				<div class="uikit-block__body">
+
+					<!-- кнопки вызова -->
+					<button class="btn modal-open" data-modal-open="modal-content">Modal Content</button>
+					<button class="btn modal-open" data-modal-open="modal-form">Modal Form</button>
+
+				</div>
+			</div>
+		</main>
+
+		<!-- footer -->
+	</div>
+
+
+
+	<!-- Modals -->
+
+	<!-- Модальное окно для Контента (вставляем перед закрывающим body) -->
+	<div class="modal modal-content" data-modal="modal-content">
+		<div class="modal__overlay">
+			<div class="modal__content">
+				<div class="modal__close"></div>
+				<!-- modal-header -->
+				<div class="modal__header text-center">
+					<h3 class="modal__title">Заголовок</h3>
+					<p class="modal__descr">Описание модального окна</p>
+				</div>
+				<!-- / .modal-header -->
+			</div>
+		</div>
+	</div>
+
+	<!-- Модальное окно для Форм (вставляем перед закрывающим body) -->
+	<div class="modal modal-form" data-modal="modal-form">
+		<div class="modal__overlay">
+			<div class="modal__content">
+				<div class="modal__close"></div>
+
+				<!-- form -->
+				Здесь вставляем форму
+				<!-- / .form -->
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

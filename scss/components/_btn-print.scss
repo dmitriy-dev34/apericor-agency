@@ -1,0 +1,23 @@
+.btn-print {
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--line-dark);
+  color: var(--icon-gray);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+  }
+}

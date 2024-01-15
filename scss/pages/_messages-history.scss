@@ -1,0 +1,33 @@
+.letters-history {
+  .letter-men {
+    margin-right: 48px;
+  }
+
+  .letter-woman {
+    margin-left: 48px;
+  }
+}
+
+@media (max-width: 599px) {
+  .letters-history {
+    .letter-men {
+      margin-right: 24px;
+    }
+
+    .letter-woman {
+      margin-left: 24px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .letters-history {
+    .letter-men {
+      margin-right: 0;
+    }
+
+    .letter-woman {
+      margin-left: 0;
+    }
+  }
+}

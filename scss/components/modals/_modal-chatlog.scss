@@ -1,0 +1,52 @@
+.modal-chatlog {
+  &__header {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: 16px;
+  }
+
+  .modal__title {
+    margin-bottom: 0;
+  }
+
+  &__data {
+    margin-bottom: 24px;
+    position: relative;
+    li {
+      font-weight: 700;
+    }
+
+    .btn-print {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__profiles {
+    font-weight: 700;
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 700;
+      &:hover {
+        text-decoration: underline;
+      }
+
+      span {
+        color: var(--text-gray);
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-chatlog__data li {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+  }
+}

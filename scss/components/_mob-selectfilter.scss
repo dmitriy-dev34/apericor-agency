@@ -1,0 +1,51 @@
+.mob-selectfilter {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid var(--line-dark);
+  padding: 0 16px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
+  position: relative;
+  display: none;
+  transition: border-color 0.3s ease-in-out;
+  animation: var(--animation-fade);
+
+  @media (max-width: 480px) {
+    display: flex;
+  }
+
+  &.open {
+    border-color: var(--blue-color);
+    &::after {
+      background: url("../img/icons/ic-select_arrow-up.svg") no-repeat center;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("../img/icons/ic-select_arrow-down.svg") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    color: var(--blue-color);
+  }
+}

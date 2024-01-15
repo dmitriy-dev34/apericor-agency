@@ -1,0 +1,79 @@
+@import "./base/default";
+@import "./uikit";
+
+// Libs
+@import "./libs/datepicker-settings";
+
+/* ------------------- COMPONENTS -------------------- */
+// @import "./components/";
+@import "./components/css-grid";
+@import "./components/scrollbar-custom";
+@import "./components/spaces";
+@import "./components/logo";
+@import "./components/btn-top";
+@import "./components/btn";
+@import "./components/btn-burger";
+@import "./components/btn-print";
+@import "./components/icons";
+@import "./components/content-box";
+@import "./components/dropdown";
+@import "./components/not-indicator";
+@import "./components/pagination";
+@import "./components/notification-icons";
+@import "./components/page-tabs";
+@import "./components/page-title";
+@import "./components/system-message";
+@import "./components/counter-number";
+@import "./components/tooltip";
+@import "./components/photo-placeholder";
+@import "./components/upload-file";
+@import "./components/item-status";
+@import "./components/no-content";
+@import "./components/mob-selectfilter";
+@import "./components/content-filter";
+@import "./components/chat-item";
+
+// profiles
+@import "./components/profile-status";
+@import "./components/profile-item";
+@import "./components/photo-item";
+@import "./components/profile-add";
+@import "./components/flag-icon";
+@import "./components/video-item";
+@import "./components/document-item";
+@import "./components/letter-item";
+
+// Tables
+@import "./components/tables/table-base";
+@import "./components/tables/table-transactions";
+
+/* ------------------- Modals -------------------- */
+@import "./components/modals/modal-base";
+@import "./components/modals/modal-cropphoto";
+@import "./components/modals/modal-chatlog";
+
+/* ------------------- Forms -------------------- */
+@import "./components/form/form";
+@import "./components/form/form-label";
+@import "./components/form/form-field";
+@import "./components/form/field-search";
+@import "./components/form/select";
+@import "./components/form/checkbox";
+@import "./components/form/radio";
+@import "./components/form/radio-toogle";
+
+/* ------------------- BLOCKS -------------------- */
+@import "./blocks/header";
+@import "./blocks/panel-nav";
+@import "./blocks/profile-photos";
+@import "./blocks/profile-videos";
+
+@import "./blocks/footer";
+// @import "./blocks/";
+
+/* ------------------- PAGES -------------------- */
+@import "./pages/bonuses";
+@import "./pages/profiles";
+@import "./pages/profile";
+@import "./pages/profile-verificate";
+@import "./pages/messages-history";

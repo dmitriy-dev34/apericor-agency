@@ -1,0 +1,31 @@
+.bonuses-filter {
+  &__top,
+  &__bottom {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__bottom {
+    padding-top: 16px;
+  }
+}
+
+.bonuses-filter__selects {
+  width: 60%;
+  display: flex;
+  gap: 16px;
+}
+
+.bonuses-filter__inputs {
+  width: 40%;
+  display: flex;
+  gap: 16px;
+}
+
+.bonuses-transaction {
+  padding: 32px 0;
+}
+.bonuses-transaction__title {
+  color: var(--title-color);
+  margin-bottom: 16px;
+}

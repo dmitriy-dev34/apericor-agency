@@ -1,0 +1,95 @@
+.video-item {
+  position: relative;
+  border-radius: 12px;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+
+  .upload-file {
+    width: 100%;
+    height: 100%;
+  }
+
+  .check {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 1;
+
+    &__box {
+      border-color: #fff;
+    }
+  }
+
+  .item-status {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    display: inline-flex;
+    width: max-content;
+    border-radius: 0 0 6px 0;
+    top: 0;
+    left: 1px;
+    bottom: inherit;
+    right: inherit;
+  }
+}
+
+// !profile-video
+.profile-video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  &.video-moderate {
+    opacity: 0.5;
+  }
+}
+
+.profile-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &::poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.profile-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+  outline-width: 0;
+}
+
+.profile-video__btn {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: url("../img/ic-play.svg") no-repeat center;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  &.btn-pause {
+    background: url("../img/ic-pause.svg") no-repeat center;
+  }
+}

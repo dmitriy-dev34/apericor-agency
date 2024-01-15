@@ -1,0 +1,22 @@
+.profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 24px;
+  padding-top: 24px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding-top: 24px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-options-wrapper {
+    margin-bottom: 24px;
+  }
+}

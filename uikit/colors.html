@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg">
+	<link rel="icon" type="image/png" href="../favicon/favicon.png">
+	<title>Apericor - агентский кабинет</title>
+	<!-- CSS -->
+	<!-- Materials Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="../css/libs/datepicker.min.css">
+	<link rel="stylesheet" href="../css/main.min.css">
+
+	<!-- Libs JS -->
+	<script src="../js/libs/jquery3.7.1.min.js"></script>
+	<script src="../js/libs/datepicker.min.js"></script>
+	<script src="../js/libs/datepicker.en.min.js"></script>
+	<!-- Scripts JS -->
+	<script defer src="../js/form.js"></script>
+	<script defer src="../js/modal.js"></script>
+	<script defer src="../js/mob-selectfilter.js"></script>
+	<script defer src="../js/main.js"></script>
+</head>
+
+<body class="page__body">
+	<div class="page__wrapper">
+		<button type="button" id="btnScrollTop" textbold="Top"></button>
+
+		<!-- Main -->
+		<main class="page__main">
+
+			<div class="uikit-block">
+				<div class="uikit-block__header">
+					<div class="container">
+						<h1 class="textlarge-3 color-white">Colors Styles</h1>
+					</div>
+				</div>
+
+				<div class="uikit-block__body">
+
+					<!-- accent-colors -->
+					<div class="uikit-grid mb-64">
+						<div class="uikit-item">
+							<div class="uikit-item__box bg-dark"></div>
+							<div class="uikit-item__info">
+								<span class="uikit-item__info-name textbold-8 color-dark">Dark</span>
+								<span class="uikit-item__info-hex">var(--dark-color)</span>
+							</div>
+						</div>
+
+						<div class="uikit-item">
+							<div class="uikit-item__box bg-pink"></div>
+							<div class="uikit-item__info">
+								<span class="uikit-item__info-name textbold-8 color-pink">Pink</span>
+								<span class="uikit-item__info-hex">var(--pink-color)</span>
+							</div>
+						</div>
+
+						<div class="uikit-item">
+							<div class="uikit-item__box bg-blue"></div>
+							<div class="uikit-item__info">
+								<span class="uikit-item__info-name textbold-8 color-blue">Blue</span>
+								<span class="uikit-item__info-hex">var(--blue-color)</span>
+							</div>
+						</div>
+
+						<div class="uikit-item">
+							<div class="uikit-item__box bg-purple"></div>
+							<div class="uikit-item__info">
+								<span class="uikit-item__info-name textbold-8 color-purple">Purple</span>
+								<span class="uikit-item__info-hex">var(--purple-color)</span>
+							</div>
+						</div>
+
+						<div class="uikit-item">
+							<div class="uikit-item__box bg-green"></div>
+							<div class="uikit-item__info">
+								<span class="uikit-item__info-name textbold-8 color-green">Green</span>
+								<span class="uikit-item__info-hex">var(--green-color)</span>
+							</div>
+						</div>
+
+						<div class="uikit-item">
+							<div class="uikit-item__box bg-warning"></div>
+							<div class="uikit-item__info">
+								<span class="uikit-item__info-name textbold-8 color-warning">Warning</span>
+								<span class="uikit-item__info-hex">var(--green-color)</span>
+							</div>
+						</div>
+
+						<div class="uikit-item">
+							<div class="uikit-item__box bg-chat"></div>
+							<div class="uikit-item__info">
+								<span class="uikit-item__info-name textbold-8">Chat gradient</span>
+								<span class="uikit-item__info-hex">var(--chat-gradient)</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- gray-colors -->
+					<div class="uikit-grid mb-64">
+						<div class="uikit-item">
+							<div class="uikit-item__box bg-gray-1"></div>
+							<div class="uikit-item__info">
+								<span class="uikit-item__info-name textbold-8">Gray 1</span>
+								<span class="uikit-item__info-hex">var(--gray-color_1)</span>
+							</div>
+						</div>
+
+						<div class="uikit-item">
+							<div class="uikit-item__box bg-gray-2"></div>
+							<div class="uikit-item__info">
+								<span class="uikit-item__info-name textbold-8">Gray 2</span>
+								<span class="uikit-item__info-hex">var(--gray-color_2)</span>
+							</div>
+						</div>
+
+						<div class="uikit-item">
+							<div class="uikit-item__box bg-gray-3"></div>
+							<div class="uikit-item__info">
+								<span class="uikit-item__info-name textbold-8">Gray 3</span>
+								<span class="uikit-item__info-hex">var(--gray-color_3)</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- text-colors -->
+					<div class="uikit-grid mb-64">
+						<div class="uikit-item">
+							<div class="uikit-item__box bg-title"></div>
+							<div class="uikit-item__info">
+								<span class="uikit-item__info-name textbold-8 color-title">Title</span>
+								<span class="uikit-item__info-hex">var(--title-color)</span>
+							</div>
+						</div>
+
+						<div class="uikit-item">
+							<div class="uikit-item__box bg-text"></div>
+							<div class="uikit-item__info">
+								<span class="uikit-item__info-name textbold-8 color-text">Body Text</span>
+								<span class="uikit-item__info-hex">var(--text-color)</span>
+							</div>
+						</div>
+
+						<div class="uikit-item">
+							<div class="uikit-item__box bg-text-gray"></div>
+							<div class="uikit-item__info">
+								<span class="uikit-item__info-name textbold-8 color-text">Text Gray</span>
+								<span class="uikit-item__info-hex">var(--text-gray)</span>
+							</div>
+						</div>
+
+						<div class="uikit-item">
+							<div class="uikit-item__box bg-link"></div>
+							<div class="uikit-item__info">
+								<span class="uikit-item__info-name textbold-8 link">Link</span>
+								<span class="uikit-item__info-hex">var(--green-color)</span>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- shadow blocks -->
+					<div class="uikit-grid mb-64">
+						<div class="uikit-item">
+							<div class="uikit-item__box bg-white bx-dropdown"></div>
+							<div class="uikit-item__info">
+								<span class="uikit-item__info-name textbold-8 color-dark">Dropdown Shadow</span>
+								<span class="uikit-item__info-hex">var(--bx-dropdown)</span>
+							</div>
+						</div>
+
+						<div class="uikit-item">
+							<div class="uikit-item__box bg-white bx-modal"></div>
+							<div class="uikit-item__info">
+								<span class="uikit-item__info-name textbold-8 color-dark">Modal Shadow</span>
+								<span class="uikit-item__info-hex">var(--bx-modal)</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- footer -->
+	</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+.content-filter {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+
+  &__options {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .btn {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 599px) {
+  .content-filter,
+  .content-filter__options {
+    flex-direction: column;
+  }
+
+  .letters-options__btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-filter {
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.form-label {
+  display: inline-block;
+  color: var(--text-color);
+  font-family: var(--font-default);
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 700;
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+  }
+}

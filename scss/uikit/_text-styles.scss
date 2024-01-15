@@ -1,0 +1,131 @@
+/* ------------------- Text Styles -------------------- */
+
+// Text Large
+.textlarge-1,
+.textlarge-2,
+.textlarge-3 {
+  color: var(--title-color);
+  font-family: var(--font-default);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.textlarge-1 {
+  font-size: 64px;
+}
+
+.textlarge-2 {
+  font-size: 56px;
+}
+
+.textlarge-3 {
+  font-size: 48px;
+}
+
+// Text Blod
+.textbold-1,
+.textbold-2,
+.textbold-3,
+.textbold-4,
+.textbold-5,
+.textbold-6,
+.textbold-7,
+.textbold-8,
+.textbold-9,
+.textbold-10,
+.textbold-11 {
+  color: var(--title-color);
+  font-family: var(--font-default);
+  font-weight: 700;
+}
+
+.textbold-1 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.textbold-2 {
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.textbold-3 {
+  font-size: 32px;
+  line-height: 1.4;
+}
+
+.textbold-4 {
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+.textbold-5 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.textbold-6 {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.textbold-7 {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.textbold-8 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.textbold-10 {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.textbold-11 {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+// Text Normal
+.text-1,
+.text-2,
+.text-3,
+.text-4 {
+  color: var(--text-color);
+  font-family: var(--font-default);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.text-1 {
+  font-size: 18px;
+}
+
+.text-2 {
+  font-size: 16px;
+}
+
+.text-3 {
+  font-size: 14px;
+}
+
+.text-4 {
+  font-size: 12px;
+}
+
+.text-5 {
+  font-size: 10px;
+}
+
+.link {
+  cursor: pointer;
+  color: var(--link-color);
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    text-decoration: none;
+  }
+}

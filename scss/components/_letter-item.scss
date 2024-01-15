@@ -1,0 +1,143 @@
+.letter-item {
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0px 8px 16px 0px rgba(77, 83, 103, 0.08);
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &.letter-men {
+    background: #eff7fc;
+    border: 1px solid var(--blue-color);
+  }
+
+  &.letter-woman {
+    background: #fdf2f5;
+    border: 1px solid var(--pink-color);
+
+    .letter-from__link {
+      color: var(--pink-color);
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: auto 96px;
+    gap: 24px;
+  }
+
+  &__text {
+    font-size: 16px;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__photo {
+    height: 144px;
+    border-radius: 8px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.letter-from {
+  font-weight: 700;
+
+  &__link {
+    color: var(--blue-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__id {
+    font-weight: 400;
+  }
+}
+
+.letter-date {
+  color: var(--text-gray);
+}
+
+.letter-textsize {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+
+  &__lg {
+    cursor: pointer;
+    display: inline-block;
+    color: var(--blue-color);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    transition: opacity 0.3s ease-in-out;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__sm {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: var(--blue-color);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .letter-item__info {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .letter-item__body {
+    grid-template-columns: 1fr;
+  }
+
+  .letter-item__photo {
+    width: 96px;
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .letter-item {
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .letter-item__text {
+    font-size: 15px;
+  }
+
+  .letter-item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}

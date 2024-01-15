@@ -1,0 +1,109 @@
+/* ------------------- Text Colors -------------------- */
+.color-white {
+  color: #fff;
+}
+
+.color-dark {
+  color: var(--dark-color);
+}
+
+.color-pink {
+  color: var(--pink-color);
+}
+
+.color-blue {
+  color: var(--blue-color);
+}
+
+.color-green {
+  color: var(--green-color);
+}
+
+.color-purple {
+  color: var(--purple-color);
+}
+
+.color-warning {
+  color: var(--warning-color);
+}
+
+.color-yellow {
+  color: var(--yellow-color);
+}
+
+.color-red {
+  color: var(--error-color);
+}
+
+.text-gray {
+  color: var(--text-gray);
+}
+
+.color-link {
+  color: var(--link-color);
+}
+
+.icon-gray {
+  color: #b4b4b4;
+}
+
+/* ------------------- Backgrounds color -------------------- */
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-dark {
+  background-color: var(--dark-color);
+}
+
+.bg-pink {
+  background-color: var(--pink-color);
+}
+
+.bg-blue {
+  background-color: var(--blue-color);
+}
+
+.bg-green {
+  background-color: var(--green-color);
+}
+
+.bg-purple {
+  background-color: var(--purple-color);
+}
+
+.bg-warning {
+  background-color: var(--warning-color);
+}
+
+.bg-link {
+  background-color: var(--link-color);
+}
+
+.bg-title {
+  background-color: var(--title-color);
+}
+
+.bg-text {
+  background-color: var(--text-color);
+}
+
+.bg-text-gray {
+  background-color: var(--text-gray);
+}
+
+.bg-gray-1 {
+  background-color: var(--gray-color_1);
+}
+
+.bg-gray-2 {
+  background-color: var(--gray-color_2);
+}
+
+.bg-gray-3 {
+  background-color: var(--gray-color_3);
+}
+
+.bg-chat {
+  background: var(--chat-gradient);
+}

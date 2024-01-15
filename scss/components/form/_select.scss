@@ -1,0 +1,208 @@
+/* ------------------- Custom Select -------------------- */
+.select {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  width: 100%;
+
+  // название селекта
+  &__label {
+    display: block;
+    color: var(--text-gray);
+    box-sizing: border-box;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.2s ease 0s;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  &__trigger {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    color: var(--text-color);
+    background-color: #fff;
+    border: 1px solid var(--line-dark);
+    border-radius: 8px;
+    padding: 0 20px;
+    padding-right: 15px;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      border-color: var(--blue-color);
+    }
+
+    // стрелка
+    &::after {
+      content: "";
+      position: absolute;
+      top: 53%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: 15px;
+      width: 18px;
+      height: 18px;
+      background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTkiIHZpZXdCb3g9IjAgMCAxOSAxOSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZyBpZD0iOTM2OTgwZjciPgogICAgPHBhdGggaWQ9IjRkMWM0OTZiIiBkPSJNNSA3LjI1TDkuNSAxMS43NUwxNCA3LjI1IiBzdHJva2U9IiM0RjRGNEYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg+CiAgPC9nPgo8L3N2Zz4=);
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: all 0.4s ease-in-out;
+      opacity: 0.8;
+    }
+
+    // состояние неактивное
+    &.disabled {
+      background-color: #f2f4f7;
+    }
+  }
+
+  // выбранный элемент
+  &__selected {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  // список опций
+  &__options {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow-y: auto;
+    list-style: none;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: var(--bx-dropdown);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: fade 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 10;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--blue-color);
+      border-radius: 6px;
+    }
+  }
+
+  // опция
+  &__option {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    padding: 12px 15px;
+    transition: background-color 0.25s ease-in-out;
+    position: relative;
+
+    &:hover {
+      background-color: var(--blue-light-color);
+    }
+
+    &.selected {
+      background-color: var(--blue-color);
+      color: #fff;
+      font-weight: 500;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZyBpZD0iMGE3MzcxYzciIGNsaXAtcGF0aD0idXJsKCM4NTFiMjdmOSkiPgogICAgPHBhdGggaWQ9Ijc5YzU4NTkyIiBkPSJNMTkuNjg3NSAxMEMxOS42ODc1IDE1LjM1MDMgMTUuMzUwMyAxOS42ODc1IDEwIDE5LjY4NzVDNC42NDk3MyAxOS42ODc1IDAuMzEyNSAxNS4zNTAzIDAuMzEyNSAxMEMwLjMxMjUgNC42NDk3MyA0LjY0OTczIDAuMzEyNSAxMCAwLjMxMjVDMTUuMzUwMyAwLjMxMjUgMTkuNjg3NSA0LjY0OTczIDE5LjY4NzUgMTBaTTguODc5NDUgMTUuMTI5NUwxNi4wNjcgNy45NDE5NUMxNi4zMTEgNy42OTc4OSAxNi4zMTEgNy4zMDIxNSAxNi4wNjcgNy4wNTgwOUwxNS4xODMxIDYuMTc0MjJDMTQuOTM5IDUuOTMwMTIgMTQuNTQzMyA1LjkzMDEyIDE0LjI5OTIgNi4xNzQyMkw4LjQzNzUgMTIuMDM1OUw1LjcwMDgyIDkuMjk5MThDNS40NTY3NiA5LjA1NTEyIDUuMDYxMDIgOS4wNTUxMiA0LjgxNjkxIDkuMjk5MThMMy45MzMwNSAxMC4xODNDMy42ODg5OCAxMC40MjcxIDMuNjg4OTggMTAuODIyOSAzLjkzMzA1IDExLjA2NjlMNy45OTU1NSAxNS4xMjk0QzguMjM5NjUgMTUuMzczNSA4LjYzNTM1IDE1LjM3MzUgOC44Nzk0NSAxNS4xMjk1WiIgZmlsbD0id2hpdGUiPjwvcGF0aD4KICA8L2c+CiAgPGRlZnM+CiAgICA8Y2xpcFBhdGggaWQ9Ijg1MWIyN2Y5Ij4KICAgICAgPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSJ3aGl0ZSI+PC9yZWN0PgogICAgPC9jbGlwUGF0aD4KICA8L2RlZnM+Cjwvc3ZnPg==")
+          no-repeat center;
+        background-size: cover;
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  // когда открыт
+  &.open {
+    position: relative;
+
+    .select__label {
+      cursor: default;
+      top: 0;
+      left: 15px;
+      transition: top 0.2s;
+      background: #fff;
+      color: var(--text-gray);
+      font-weight: 400;
+      font-size: 14px;
+      padding: 0 5px;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+
+    .select__trigger {
+      border-color: var(--blue-color);
+
+      &::after {
+        transform: rotateX(180deg) translateY(50%);
+      }
+    }
+
+    .select__options {
+      max-height: 200px;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+  }
+
+  &.select-sm {
+    .select__trigger {
+      height: 48px;
+      padding: 0 16px;
+    }
+
+    .select__label {
+      font-size: 15px;
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .select {
+    &__trigger {
+      height: 48px;
+      padding: 0 16px;
+    }
+  }
+}

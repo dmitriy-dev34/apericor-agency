@@ -1,0 +1,50 @@
+.profile-add {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px dashed #999;
+  gap: 8px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border: 1px dashed var(--blue-color);
+    transform: scale(1.02);
+
+    .profile-add__icon {
+      background: var(--blue-color);
+      border-color: var(--blue-color);
+
+      span {
+        color: #fff;
+      }
+    }
+  }
+
+  &__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(#000, 0.15);
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+
+    span {
+      color: var(--blue-color);
+    }
+
+    @media (max-width: 375px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}

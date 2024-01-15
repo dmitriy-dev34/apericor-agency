@@ -1,0 +1,28 @@
+.profile-status {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.status-new {
+  background: var(--yellow-color);
+}
+
+.status-active,
+.status-online {
+  background: var(--green-color);
+}
+
+.status-inactive {
+  background: rgba(#000, 0.2);
+}
+
+.status-offline {
+  background: rgba(#000, 0.1);
+}
+
+.status-blocked {
+  background: var(--red-color);
+}

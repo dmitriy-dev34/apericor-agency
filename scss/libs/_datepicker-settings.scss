@@ -1,0 +1,34 @@
+.air-datepicker {
+  padding-left: 12px 10px;
+}
+
+.air-datepicker-global-container {
+  z-index: 10000001;
+}
+
+.air-datepicker-nav--title {
+  font-weight: 500;
+}
+
+.datepicker--day-name {
+  color: var(--blue-color);
+  font-family: var(--font-default);
+  font-weight: 700;
+}
+
+.datepicker--cell.-current- {
+  color: var(--blue-color);
+  font-weight: 700;
+}
+
+.air-datepicker--cell.-selected-,
+.air-datepicker--cell.-selected-.-current-,
+.air-datepicker-cell.-selected- {
+  background: var(--blue-color);
+}
+
+.air-datepicker--button,
+.air-datepicker-cell.-current- {
+  color: var(--blue-color);
+  background-color: #f2f2f2;
+}

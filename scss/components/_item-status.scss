@@ -1,0 +1,47 @@
+.item-status {
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: 32px;
+  gap: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  padding: 0 12px;
+
+  &__icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+  }
+
+  &.status-available {
+    background: var(--blue-color);
+  }
+
+  &.status-moderate {
+    background: var(--yellow-color);
+  }
+
+  &.status-private {
+    background: rgba(#333, 0.7);
+    backdrop-filter: blur(8px);
+
+    .item-status__icon {
+      color: var(--pink-color);
+    }
+  }
+
+  &.status-verified {
+    background: var(--green-color);
+  }
+
+  &.status-declined {
+    background: var(--red-color);
+  }
+}

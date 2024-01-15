@@ -1,0 +1,48 @@
+.dropdown {
+  width: 100%;
+  background: var(--white-color);
+  box-shadow: var(--bx-dropdown);
+  border-radius: var(--br-8);
+  padding: 8px 0;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+
+  display: none;
+  animation: var(--animation-fade);
+
+  &.active {
+    display: block;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    padding: 12px 15px;
+    transition: background-color 0.25s ease-in-out;
+    position: relative;
+
+    &:hover {
+      background-color: var(--blue-color);
+      color: #fff;
+
+      .search-result__link,
+      .search-result__link-icon {
+        color: #fff;
+      }
+    }
+  }
+}
